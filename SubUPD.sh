@@ -92,6 +92,3 @@ if [[ `service subspaced-farmer status | grep active` =~ "running" ]]; then
   echo -e "Your Subspace farmer \e[32minstalled and works\e[39m!"
   echo -e "You can check node status by the command \e[7mservice subspaced-farmer status\e[0m"
   echo -e "Press \e[7mQ\e[0m for exit from status menu"
-else
-  echo -e "Your Subspace farmer \e[31mwas not installed correctly\e[39m, please reinstall."
-fi
