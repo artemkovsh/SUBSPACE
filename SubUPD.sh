@@ -75,3 +75,6 @@ sudo systemctl enable subspaced subspaced-farmer
 sudo systemctl restart subspaced
 sleep 10
 sudo systemctl restart subspaced-farmer
+echo '=============== УСТАНОВКА ЗАВЕРШЕНА ==================='
+echo -e 'Проверка логов ноды: \e[1m\e[32mjournalctl -u subspaced -f -o cat \e[0m'
+echo -e 'Проверка логов фармера: \e[1m\e[32mdocker logs subspace-farmer-1 \e[0m'
