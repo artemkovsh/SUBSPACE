@@ -75,20 +75,3 @@ sudo systemctl enable subspaced subspaced-farmer
 sudo systemctl restart subspaced
 sleep 10
 sudo systemctl restart subspaced-farmer
-
-echo "==================================================="
-echo -e '\n\e[42mCheck node status\e[0m\n' && sleep 1
-if [[ `service subspaced status | grep active` =~ "running" ]]; then
-  echo -e "Your Subspace node \e[32minstalled and works\e[39m!"
-  echo -e "You can check node status by the command \e[7mservice subspaced status\e[0m"
-  echo -e "Press \e[7mQ\e[0m for exit from status menu"
-else
-  echo -e "Your Subspace node \e[31mwas not installed correctly\e[39m, please reinstall."
-fi
-sleep 2
-echo "==================================================="
-echo -e '\n\e[42mCheck farmer status\e[0m\n' && sleep 1
-if [[ `service subspaced-farmer status | grep active` =~ "running" ]]; then
-  echo -e "Your Subspace farmer \e[32minstalled and works\e[39m!"
-  echo -e "You can check node status by the command \e[7mservice subspaced-farmer status\e[0m"
-  echo -e "Press \e[7mQ\e[0m for exit from status menu"
